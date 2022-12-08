@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item>
+      <ion-buttons> <ion-back-button></ion-back-button> </ion-buttons>
+      <ion-title>lista Produtos</ion-title>
+    </ion-item>
+  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-item *ngFor="let arrayprod of arrayprod" >
+  <ion-label>
+     • {{arrayprod.nome}}
+  </ion-label>
+  <ion-label>| {{arrayprod.quan}}</ion-label>
+  <ion-button (click)="aumentar(arrayprod.id.value)"><ion-icon name="add-outline"></ion-icon></ion-button>
+</ion-item>
+
+</ion-content>
